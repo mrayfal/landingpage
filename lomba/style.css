@@ -8,12 +8,15 @@ body {
     background-color: #e7e7e7;
 }
 
-.py-7{
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+.py-7 {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
 }
 
 
+body::-webkit-scrollbar {
+    display: none;
+}
 
 .bg-slider1 {
     background: rgb(101, 101, 101);
@@ -29,17 +32,40 @@ body {
     height: 20px;
 }
 
+/* sliders style */
+
+.img-sliders {
+    height: 300px;
+    width: 300px;
+    rotate: -20deg;
+}
+
+.box-img { 
+    rotate: 20deg;
+    background-color:#B0B0B0;
+    width: max-content;
+    height: max-content;
+    box-shadow: 1px 0px 20px 20px #B0B0B0;
+}
+
+
+/* slider style done */
+
+
 /* news style */
 
-.news-title{
+.news-title {
     text-transform: uppercase;
-    font-size: 17px;
+    font-size: 30px;
     font-weight: 500;
     padding: 11px 0px;
     line-height: 1;
     margin-top: 10px;
-    border-radius: 5px;
     display: inline-block;
     min-width: 146px;
     text-align: center;
+}
+
+.m-view{
+    margin-right: 10rem;
 }
