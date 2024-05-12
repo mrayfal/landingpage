@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .slider-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+
+    .slide {
+        min-width: 100%;
+    }
+
+    button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+</style>
+
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="asset/icons/search.png" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrK6U-sO8Lb1vZETjk66gfoplxaW4SY5hLo1AYI73T4Q&s" alt="Slide 2">
+            </div>
+            <!-- Tambah slide lain sesuai kebutuhan -->
+        </div>
+        <button class="prev" onclick="prevSlide()">Previous</button>
+        <button class="next" onclick="nextSlide()">Next</button>
+    </div>
+</body>
+<script>
+    let slideIndex = 0;
+    let intervalId;
+
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.slide');
+        if (index >= slides.length) {
+            slideIndex = 0;
+        } else if (index < 0) {
+            slideIndex = slides.length - 1;
+        }
+        const offset = -slideIndex * 100 + '%';
+        document.querySelector('.slider').style.transform = `translateX(${offset})`;
+    }
+
+    function nextSlide() {
+        slideIndex++;
+        showSlide(slideIndex);
+    }
+
+    function prevSlide() {
+        slideIndex--;
+        showSlide(slideIndex);
+    }
+
+    function startAutoSlide() {
+        intervalId = setInterval(nextSlide, 2000); // Change slide every 3 seconds
+    }
+
+    function stopAutoSlide() {
+        clearInterval(intervalId);
+    }
+
+    // Memulai slide otomatis saat halaman dimuat
+    startAutoSlide();
+
+    // Berhenti slide otomatis saat mouse masuk ke dalam slider
+    document.querySelector('.slider-container').addEventListener('mouseenter', stopAutoSlide);
+
+    // Mulai slide otomatis kembali saat mouse meninggalkan slider
+    document.querySelector('.slider-container').addEventListener('mouseleave', startAutoSlide);
+
+
+</script>
+
+</html>

@@ -4,9 +4,42 @@
     font-family: "League Spartan", sans-serif;
 }
 
+body {
+    background-color: #e7e7e7;
+}
+
+.py-7{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+
+
+.bg-slider1 {
+    background: rgb(101, 101, 101);
+    background: -moz-linear-gradient(90deg, rgba(101, 101, 101, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(101, 101, 101, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(90deg, rgba(101, 101, 101, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#656565", endColorstr="#ffffff", GradientType=1);
+}
 
 .icons {
     cursor: pointer;
     width: 20px;
     height: 20px;
+}
+
+/* news style */
+
+.news-title{
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 11px 0px;
+    line-height: 1;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    min-width: 146px;
+    text-align: center;
 }
