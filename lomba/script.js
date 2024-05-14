@@ -56,6 +56,9 @@ window.addEventListener('resize', function () {
 
 // sliders
 const gallery = document.getElementById('image-gallery');
+const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
 let isDown = false;
 let startX;
 let scrollLeft;
@@ -86,9 +89,16 @@ gallery.addEventListener('mousemove', (e) => {
 gallery.addEventListener('contextmenu', (e) => {
     e.preventDefault();
 });
- const container = document.getElementById('image-gallery');
 
-container.addEventListener('wheel', (e) => {
+gallery.addEventListener('wheel', (e) => {
     e.preventDefault(); // Mencegah perilaku standar dari scroll wheel
-    container.scrollLeft += e.deltaY * 0.50; // Menggulir ke samping dengan mengubah nilai scrollLeft
+    gallery.scrollLeft += e.deltaY * 3; // Menggulir ke samping dengan mengubah nilai scrollLeft
+});
+
+prevBtn.addEventListener('click', () => {
+    gallery.scrollLeft -= 320; // Sesuaikan jarak scroll sesuai lebar kotak
+});
+
+nextBtn.addEventListener('click', () => {
+    gallery.scrollLeft += 320; // Sesuaikan jarak scroll sesuai lebar kotak
 });

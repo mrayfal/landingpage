@@ -45,7 +45,8 @@
                 <img src="asset/icons/search.png" alt="Slide 1">
             </div>
             <div class="slide">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrK6U-sO8Lb1vZETjk66gfoplxaW4SY5hLo1AYI73T4Q&s" alt="Slide 2">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrK6U-sO8Lb1vZETjk66gfoplxaW4SY5hLo1AYI73T4Q&s"
+                    alt="Slide 2">
             </div>
             <!-- Tambah slide lain sesuai kebutuhan -->
         </div>
@@ -54,47 +55,47 @@
     </div>
 </body>
 <script>
-    let slideIndex = 0;
-    let intervalId;
+    const boxSlider = document.getElementById('boxSlider');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
 
-    function showSlide(index) {
-        const slides = document.querySelectorAll('.slide');
-        if (index >= slides.length) {
-            slideIndex = 0;
-        } else if (index < 0) {
-            slideIndex = slides.length - 1;
-        }
-        const offset = -slideIndex * 100 + '%';
-        document.querySelector('.slider').style.transform = `translateX(${offset})`;
-    }
+    let isDown = false;
+    let startX;
+    let scrollLeft;
 
-    function nextSlide() {
-        slideIndex++;
-        showSlide(slideIndex);
-    }
+    boxSlider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - boxSlider.offsetLeft;
+        scrollLeft = boxSlider.scrollLeft;
+    });
 
-    function prevSlide() {
-        slideIndex--;
-        showSlide(slideIndex);
-    }
+    boxSlider.addEventListener('mouseleave', () => {
+        isDown = false;
+    });
 
-    function startAutoSlide() {
-        intervalId = setInterval(nextSlide, 2000); // Change slide every 3 seconds
-    }
+    boxSlider.addEventListener('mouseup', () => {
+        isDown = false;
+    });
 
-    function stopAutoSlide() {
-        clearInterval(intervalId);
-    }
+    boxSlider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - boxSlider.offsetLeft;
+        const walk = (x - startX) * 1;
+        boxSlider.scrollLeft = scrollLeft - walk;
+    });
 
-    // Memulai slide otomatis saat halaman dimuat
-    startAutoSlide();
+    boxSlider.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+    });
 
-    // Berhenti slide otomatis saat mouse masuk ke dalam slider
-    document.querySelector('.slider-container').addEventListener('mouseenter', stopAutoSlide);
+    prevBtn.addEventListener('click', () => {
+        boxSlider.scrollLeft -= 320; // Sesuaikan jarak scroll sesuai lebar kotak
+    });
 
-    // Mulai slide otomatis kembali saat mouse meninggalkan slider
-    document.querySelector('.slider-container').addEventListener('mouseleave', startAutoSlide);
-
+    nextBtn.addEventListener('click', () => {
+        boxSlider.scrollLeft += 320; // Sesuaikan jarak scroll sesuai lebar kotak
+    });
 
 </script>
 

@@ -79,6 +79,7 @@ body::-webkit-scrollbar {
 .box-img-news{
     width: 362px;
     height: 362px;
+    object-fit: cover;
 }
 
 .mt-10 {
@@ -100,13 +101,12 @@ body::-webkit-scrollbar {
     white-space: nowrap; /* Prevent line breaks */
     width: 1500px; 
     cursor: pointer;
+    scroll-behavior: smooth;
 }
 
 .box-scrols::-webkit-scrollbar {
     display: none;
 }
-
-
 /* news style done */
 
 /* running style */
@@ -143,4 +143,57 @@ body::-webkit-scrollbar {
     object-fit: cover;
     object-position: 50% 50%;
 }
+
+/* running done */
+
+/* about */
+
+.box-img-about{
+    position: relative;
+}
+
+
+.img-about,
+.img-about-1,
+.img-about-2{
+ position: absolute;
+
+}
+
+
+.img-about{
+    rotate: 34.1deg;
+    z-index: 4;
+    width: 500px;
+    height: auto;
+}
+.img-about-1{
+    filter: blur(2px);
+    rotate: 19.35deg;
+    width: 500px;
+    height: auto;
+    z-index: 3;
+}
+.img-about-2{
+    filter: blur(2px) drop-shadow(1px 1px 70px black);
+    z-index: 2;
+    width: 500px;
+    height: auto;
+}
+
+.my-10{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+.he-about{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.fs-custom{
+    font-size: 4rem;
+}
+
+/* about done */
 
