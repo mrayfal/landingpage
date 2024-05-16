@@ -196,4 +196,18 @@ body::-webkit-scrollbar {
 }
 
 /* about done */
-
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+/* Style untuk logo */
+.logo {
+    width: 50px; /* Sesuaikan ukuran dengan logo Anda */
+    height: auto;
+    margin-right: 10px;
+}
+/* Style untuk konten */
+.content {
+    text-align: right;
+}
