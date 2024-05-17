@@ -17,7 +17,6 @@ body {
     padding-bottom: 10rem;
 }
 
-
 body::-webkit-scrollbar {
     display: none;
 }
@@ -44,9 +43,9 @@ body::-webkit-scrollbar {
     rotate: -20deg;
 }
 
-.box-img { 
+.box-img {
     rotate: 20deg;
-    background-color:#B0B0B0;
+    background-color: #B0B0B0;
     width: max-content;
     height: max-content;
     box-shadow: 1px 0px 20px 20px #B0B0B0;
@@ -70,13 +69,13 @@ body::-webkit-scrollbar {
     text-align: center;
 }
 
-.icons-timer  {
+.icons-timer {
     margin-left: 10px;
     width: 30px;
     height: 30px;
 }
 
-.box-img-news{
+.box-img-news {
     width: 362px;
     height: 362px;
     object-fit: cover;
@@ -86,10 +85,9 @@ body::-webkit-scrollbar {
     margin-top: 4rem;
 }
 
-.m-view{
-}
+.m-view {}
 
-.box-news{
+.box-news {
     margin: 7px;
     background-color: #fff;
 }
@@ -97,9 +95,11 @@ body::-webkit-scrollbar {
 .box-scrols {
     max-width: 1480px;
     padding: 0px;
-    overflow-x: scroll; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevent line breaks */
-    width: 1500px; 
+    overflow-x: scroll;
+    /* Enable horizontal scrolling */
+    white-space: nowrap;
+    /* Prevent line breaks */
+    width: 1500px;
     cursor: pointer;
     scroll-behavior: smooth;
 }
@@ -107,6 +107,7 @@ body::-webkit-scrollbar {
 .box-scrols::-webkit-scrollbar {
     display: none;
 }
+
 /* news style done */
 
 /* running style */
@@ -118,7 +119,7 @@ body::-webkit-scrollbar {
 
 }
 
-.btn-running{
+.btn-running {
     cursor: pointer;
     border-radius: 3px;
     width: 100%;
@@ -127,7 +128,7 @@ body::-webkit-scrollbar {
     background-color: #007bff;
 }
 
-.btn-running:hover{
+.btn-running:hover {
     background-color: #006ce0;
 }
 
@@ -137,7 +138,7 @@ body::-webkit-scrollbar {
     color: #fff;
 }
 
-.img-running{
+.img-running {
     height: 637px;
     width: 1480px;
     object-fit: cover;
@@ -146,68 +147,128 @@ body::-webkit-scrollbar {
 
 /* running done */
 
+/* produk */
+
+.box-img-produk {
+    width: 428px;
+    height: 308px;
+    object-fit: cover;
+}
+
+.box-produk {
+    margin: 7px;
+    background-color: #fff;
+}
+
+.color-teks-produk {
+    color: #006ce0;
+
+}
+
+.box-scrols-produk {
+    max-width: 1480px;
+    padding: 0px;
+    overflow-x: scroll;
+    /* Enable horizontal scrolling */
+    white-space: nowrap;
+    /* Prevent line breaks */
+    width: 1500px;
+    cursor: pointer;
+    scroll-behavior: smooth;
+}
+
+.box-scrols-produk::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+}
+
+/* Track */
+.box-scrols-produk::-webkit-scrollbar-track {
+    border-radius: 0px;
+}
+
+/* Handle */
+.box-scrols-produk::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 15px;
+}
+
+/* Handle on hover */
+.box-scrols-produk::-webkit-scrollbar-thumb:hover {
+    background: grey;
+}
+
+
+
+
+
+
+
+
+/* produk done */
+
 /* about */
 
-.box-img-about{
+.box-img-about {
     position: relative;
 }
 
 
 .img-about,
 .img-about-1,
-.img-about-2{
- position: absolute;
+.img-about-2 {
+    position: absolute;
 
 }
 
 
-.img-about{
+.img-about {
     rotate: 34.1deg;
     z-index: 4;
     width: 500px;
     height: auto;
 }
-.img-about-1{
+
+.img-about-1 {
     filter: blur(2px);
     rotate: 19.35deg;
     width: 500px;
     height: auto;
     z-index: 3;
 }
-.img-about-2{
+
+.img-about-2 {
     filter: blur(2px) drop-shadow(1px 1px 70px black);
     z-index: 2;
     width: 500px;
     height: auto;
 }
 
-.my-10{
+.my-10 {
     margin-top: 10rem;
     margin-bottom: 10rem;
 }
 
-.he-about{
+.he-about {
     margin-top: 60px;
     margin-bottom: 60px;
 }
 
-.fs-custom{
+.fs-custom {
     font-size: 4rem;
 }
 
 /* about done */
+
+
+/* footer */
 footer {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
 }
-/* Style untuk logo */
-.logo {
-    width: 50px; /* Sesuaikan ukuran dengan logo Anda */
-    height: auto;
-    margin-right: 10px;
-}
-/* Style untuk konten */
-.content {
-    text-align: right;
-}
+
+
+
+
+/* footer done */

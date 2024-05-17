@@ -57,7 +57,7 @@ window.addEventListener('resize', function () {
 // sliders
 const gallery = document.getElementById('image-gallery');
 const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
+const nextBtn = document.getElementById('nextBtn');
 
 let isDown = false;
 let startX;
