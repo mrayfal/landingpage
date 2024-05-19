@@ -19,6 +19,8 @@
     }
 
     .slide {
+        display: flex;
+        flex-wrap: wrap;
         min-width: 100%;
     }
 
@@ -55,47 +57,47 @@
     </div>
 </body>
 <script>
-    const boxSlider = document.getElementById('boxSlider');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
+    let slideIndex = 0;
+    let intervalId;
 
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.slide');
+        if (index >= slides.length) {
+            slideIndex = 0;
+        } else if (index < 0) {
+            slideIndex = slides.length - 1;
+        }
+        const offset = -slideIndex * 100 + '%';
+        document.querySelector('.slider').style.transform = `translateX(${offset})`;
+    }
 
-    boxSlider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        startX = e.pageX - boxSlider.offsetLeft;
-        scrollLeft = boxSlider.scrollLeft;
-    });
+    function nextSlide() {
+        slideIndex++;
+        showSlide(slideIndex);
+    }
 
-    boxSlider.addEventListener('mouseleave', () => {
-        isDown = false;
-    });
+    function prevSlide() {
+        slideIndex--;
+        showSlide(slideIndex);
+    }
 
-    boxSlider.addEventListener('mouseup', () => {
-        isDown = false;
-    });
+    function startAutoSlide() {
+        intervalId = setInterval(nextSlide, 2000); // Change slide every 3 seconds
+    }
 
-    boxSlider.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - boxSlider.offsetLeft;
-        const walk = (x - startX) * 1;
-        boxSlider.scrollLeft = scrollLeft - walk;
-    });
+    function stopAutoSlide() {
+        clearInterval(intervalId);
+    }
 
-    boxSlider.addEventListener('contextmenu', (e) => {
-        e.preventDefault();
-    });
+    // Memulai slide otomatis saat halaman dimuat
+    startAutoSlide();
 
-    prevBtn.addEventListener('click', () => {
-        boxSlider.scrollLeft -= 320; // Sesuaikan jarak scroll sesuai lebar kotak
-    });
+    // Berhenti slide otomatis saat mouse masuk ke dalam slider
+    document.querySelector('.slider-container').addEventListener('mouseenter', stopAutoSlide);
 
-    nextBtn.addEventListener('click', () => {
-        boxSlider.scrollLeft += 320; // Sesuaikan jarak scroll sesuai lebar kotak
-    });
+    // Mulai slide otomatis kembali saat mouse meninggalkan slider
+    document.querySelector('.slider-container').addEventListener('mouseleave', startAutoSlide);
+
 
 </script>
 
