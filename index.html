@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstarp 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <!-- animasi -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- style css manual -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- icon -->
+    <link rel="icon" href="asset/icons/logo1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+    <title>denzuz</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-white" id="navbar-new">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-3" href="#"><img src="asset/icons/logo1.png" alt=""
+                    style="width: 30px; height: auto;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active item" aria-current="page" href="#">
+                            <div class="linktext">PROMO</div>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link item" href="#">
+                            <div class="linktext">PRODUCT</div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link item" href="#">
+                            <div class="linktext">ABOUT US</div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link item" href="#">
+                            <div class="linktext">REVIEW</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <span class="navbar-text me-3" id="elemenToHide">
+                <img src="asset/icons/search.png" class="icons " alt="">
+            </span>
+        </div>
+    </nav>
+    <main>
+        <!-- sliders -->
+        <section>
+            <div class="slider-container ">
+                <div class="slider mt-5">
+                    <div class="slide  bg-slider1 d-flex justify-content-center  align-items-center">
+                        <div class="col-lg-7 text-white text-box-responvise">
+                                <h1  data-aos="fade-right"  data-aos-duration="2000" class="fw-bolder h-1">New Feeling</h1>
+                                <h4 data-aos="fade-up"  data-aos-duration="2000" class="mb-0 h-2 fw-bolder">Time to Change</h4>
+                                <h5  data-aos="fade-up"  data-aos-duration="2000" class="fw-semibold h-3">Dezuz Runner 204</h5>
+                                <p  data-aos="fade-up"  data-aos-duration="2000" class="text-sldier">109$</p>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-center align-items-center">
+                            <div class="box-img">
+                                <img src="asset/image/sepatu1.jpeg" class="img-sliders" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide bg-slider2">
+                        <div class="box-sliders d-flex justify-content-center align-items-center">
+                            <div class="bg-text blink">
+                                <h1>SOMETHING NEW SOMETHING NEW<br>
+                                    SOMETHING NEW SOMETHING NEW<br>
+                                    SOMETHING NEW SOMETHING NEW<br>
+                                    SOMETHING NEW SOMETHING NEW<br>
+                                    SOMETHING NEW SOMETHING NEW<br>
+                                    SOMETHING NEW SOMETHING NEW<br>
+                                    SOMETHING NEW SOMETHING NEW</h1>
+                                <h1>SOMETHING NEW SOMETHING NEW<br>
+                                    SOMETHING NEW SOMETHING NEW<br>
+                                    SOMETHING NEW SOMETHING NEW<br>
+                                    SOMETHING NEW SOMETHING NEW<br>
+                                    SOMETHING NEW SOMETHING NEW<br>
+                                    SOMETHING NEW SOMETHING NEW<br>
+                                    SOMETHING NEW SOMETHING NEW</h1>
+
+                            </div>
+                            <div class="box-img-slider2">
+                                <img src="asset/image/Slider/Women.png" class="img-sliders2" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide bg-slider3">
+                        <div class="box-sliders d-flex justify-content-center align-items-center">
+                            <div class="bg-text-slider3">
+                                <h1 class="top-text ">DISKON 50%</h1>
+                                <h1 class="left-text ">DISKON 50%</h1>
+                                <h1 class="right-text ">DISKON 50%</h1>
+                                <h1 class="bottom-text ">DISKON 50%</h1>
+                            </div>
+                            <div class="box-img-slider3">
+                                <img src="asset/image/Slider/Kids1.png" class="img-sliders3" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- promo -->
+        <section>
+            <div data-aos="fade" data-aos-duration="2000" data-aos-easing="ease-out-cubic" class="container my-4 ">
+                <div class="row mt-4 px-5 row-responsive">
+                    <div class="col">
+                        <div class="fs-4 mt-1 d-flex">
+                            <strong class="promo-teks">PROMO</strong>
+                            <div class="countdown ms-2" id="countdown"></div>
+                            <img src="asset/icons/stopwatch.png" class="icons-timer" alt="">
+                        </div>
+                    </div>
+                    <div class="col ">
+                        <div class="text-end ">
+                            <button id="prevBtn">Prev</button>
+                            <button id="nextBtn">Next</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mx-4 justify-content-center">
+                    <div class="box-scrols d-flex" id="image-gallery">
+                        <div class="box-news ms-0">
+                            <img src="asset/image/Women_s_Irvine_-_Ivory_White-removebg-preview.png" class="box-img-news" alt="...">
+                            <div class="p-2 box-text-produk">
+                                <h5 class="card-title mt-2">Dezus Porcupine</h5>
+                                <p class="card-text m-0">Shoes</p>
+                                <p class="text-idr fw-semibold">IDR 1,030,000</p>
+                                <a href="#" class="btn btn-primary">SEE MORE</a>
+                            </div>
+                        </div>
+                        <div class="box-news">
+                            <img src="asset/image/Women_s_Designer_Sneakers-removebg-preview.png" class="box-img-news" alt="...">
+                            <div class="p-2 box-text-produk">
+                                <h5 class="card-title mt-2">Dezus Wind</h5>
+                                <p class="card-text m-0">Shoes</p>
+                                <p class="text-idr fw-semibold">IDR 1,030,000</p>
+                                <a href="#" class="btn btn-primary">SEE MORE</a>
+                            </div>
+                        </div>
+                        <div class="box-news">
+                            <img src="asset/image/download.jpg" class="box-img-news" alt="...">
+                            <div class="p-2 box-text-produk">
+                                <h5 class="card-title mt-2">Nezus Low</h5>
+                                <p class="card-text m-0">Shoes</p>
+                                <p class="text-idr fw-semibold">IDR 1,030,000</p>
+                                <a href="#" class="btn btn-primary">SEE MORE</a>
+                            </div>
+                        </div>
+                        <div class="box-news">
+                            <img src="asset/image/Adidas_Originals_Samba_OG_Cream_White_Core_Black_Sand_Strata-removebg-preview.png" class="box-img-news" alt="...">
+                            <div class="p-2 box-text-produk">
+                                <h5 class="card-title mt-2">Dezus Samba</h5>
+                                <p class="card-text m-0">Shoes</p>
+                                <p class="text-idr fw-semibold">IDR 1,030,000</p>
+                                <a href="#" class="btn btn-primary">SEE MORE</a>
+                            </div>
+                        </div>
+                        <div class="box-news ">
+                            <img src="asset/image/Buy Off-White x Air Force 1 Low 'The Ten' - AO4606 100 _ GOAT.jpg" class="box-img-news" alt="...">
+                            <div class="p-2 box-text-produk">
+                                <h5 class="card-title mt-2">Dezus AIR</h5>
+                                <p class="card-text m-0">Shoes</p>
+                                <p class="text-idr fw-semibold">IDR 1,030,000</p>
+                                <a href="#" class="btn btn-primary">SEE MORE</a>
+                            </div>
+                        </div>
+                        <div class="box-news ">
+                            <img src="asset/image/Nike_Air_Force_1__07_Low_White_University_Blue_Sole_-_11_5-removebg-preview.png" class="box-img-news" alt="...">
+                            <div class="p-2 box-text-produk">
+                                <h5 class="card-title mt-2">Dezus AIR</h5>
+                                <p class="card-text m-0">Shoes</p>
+                                <p class="text-idr fw-semibold">IDR 1,030,000</p>
+                                <a href="#" class="btn btn-primary">SEE MORE</a>
+                            </div>
+                        </div>
+                        <div class="box-news me-0">
+                            <img src="asset/image/download__1_-removebg-preview.png" class="box-img-news" alt="...">
+                            <div class="p-2 box-text-produk">
+                                <h5 class="card-title mt-2">Nezus Low</h5>
+                                <p class="card-text m-0">Shoes</p>
+                                <p class="text-idr fw-semibold">IDR 1,030,000</p>
+                                <a href="#" class="btn btn-primary">SEE MORE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- running -->
+
+        <section>
+            <div data-aos="fade" data-aos-duration="2000" data-aos-easing="ease-out-cubic" class="container my-4" >
+                <div class="row">
+                    <div class="col d-grid justify-content-center">
+                        <img src="asset/image/img-running.jpg" class="img-running" alt="">
+                        <div class="text-running">
+                            <h1 class="fw-bold mb-0 text-center">DEZUS SHOES</h1>
+                            <h3 class="m-0">Run as fast as you can</h3>
+                            <div class="btn-running">
+                                <a class="text-btn" href="#">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- tabs running -->
+        <section>
+            <div data-aos="fade" data-aos-duration="2000" data-aos-easing="ease-out-cubic" class="container my-4">
+                <div class="row mt-4 px-5 row-responsive">
+                    <div class="col">
+                        <div class="fs-4 d-flex">
+                            <strong class="produk-teks mt-2">PRODUCT</strong>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="d-flex flex-row-reverse produk-btn">
+                            <ul class="nav nav-pills " id="pills-tab" role="tablist">
+                                <li class="produk-item" role="presentation">
+                                    <button class="produk-link active me-1" id="pills-home-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                        aria-selected="true">MENS</button>
+                                </li>
+                                <li class="produk-item" role="presentation">
+                                    <button class="produk-link me-1" id="pills-profile-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-profile" type="button" role="tab"
+                                        aria-controls="pills-profile" aria-selected="false">WOMEN</button>
+                                </li>
+                                <li class="produk-item" role="presentation">
+                                    <button class="produk-link " id="pills-contact-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-contact" type="button" role="tab"
+                                        aria-controls="pills-contact" aria-selected="false">KIDS</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- men's -->
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab" tabindex="0">
+                            <div class="slidersproduk-container">
+                                <div class="row mx-4 justify-content-center">
+                                    <div class="box-scrols-produk d-flex image-slidersproduk">
+                                        <div class="box-produk ms-0">
+                                            <img src="asset/image/Nike Dunk Low Panda Black White (size 7 - 13 Mens) _ Womens _ Grade School.jpg" class="box-img-produk" alt="...">
+                                            <div class="p-2 box-text-produk">
+                                                <h5 class="card-title mt-2">Dezus Low</h5>
+                                                <p class="card-text m-0 opacity-50">Men's Shoes</p>
+                                                <p class="fw-semibold color-teks-produk">IDR 1,030,000</p>
+                                            </div>
+                                        </div>
+                                        <div class="box-produk">
+                                            <img src="asset/image/Gift Nike this season_.jpg" class="box-img-produk" alt="...">
+                                            <div class="p-2 box-text-produk">
+                                                <h5 class="card-title mt-2">Dezus High</h5>
+                                                <p class="card-text m-0 opacity-50">Men's Shoes</p>
+                                                <p class="fw-semibold color-teks-produk">IDR 1,030,000</p>
+                                            </div>
+                                        </div>
+                                        <div class="box-produk">
+                                            <img src="asset/image/Vans_Classic_Slip-On_Men_s_Sneaker-removebg-preview.png" class="box-img-produk" alt="...">
+                                            <div class="p-2 box-text-produk">
+                                                <h5 class="card-title mt-2">Dezus Slip On</h5>
+                                                <p class="card-text m-0 opacity-50">Men's Shoes</p>
+                                                <p class="fw-semibold color-teks-produk">IDR 1,030,000</p>
+                                            </div>
+                                        </div>
+                                        <div class="box-produk me-0">
+                                            <img src="asset/image/download__2_-removebg-preview.png" class="box-img-produk" alt="...">
+                                            <div class="p-2 box-text-produk">
+                                                <h5 class="card-title mt-2">Dezus Porcupine</h5>
+                                                <p class="card-text m-0 opacity-50">Men's Shoes</p>
+                                                <p class="fw-semibold color-teks-produk">IDR 1,030,000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- woman -->
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab" tabindex="0">
+                            <div class="slidersproduk-container">
+                                <div class="row mx-4 justify-content-center">
+                                    <div class="box-scrols-produk d-flex image-slidersproduk">
+                                        <div class="box-produk ms-0">
+                                            <img src="asset/image/download__2_-removebg-preview (1).png" class="box-img-produk" alt="...">
+                                            <div class="p-2 box-text-produk">
+                                                <h5 class="card-title mt-2">Dezus Giir</h5>
+                                                <p class="card-text m-0 opacity-50">Men's Shoes</p>
+                                                <p class="fw-semibold color-teks-produk">IDR 1,030,000</p>
+                                            </div>
+                                        </div>
+                                        <div class="box-produk">
+                                            <img src="asset/image/Adidas_U_Path_X_running_shoes-removebg-preview.png" class="box-img-produk" alt="...">
+                                            <div class="p-2 box-text-produk">
+                                                <h5 class="card-title mt-2">Dezus Giir 2</h5>
+                                                <p class="card-text m-0 opacity-50">Men's Shoes</p>
+                                                <p class="fw-semibold color-teks-produk">IDR 1,030,000</p>
+                                            </div>
+                                        </div>
+                                        <div class="box-produk">
+                                            <img src="asset/image/Adidas Mens Grand Court Cloudfoam Comfort Shoes Size_ UK 6, Colour_ White.jpg" class="box-img-produk" alt="...">
+                                            <div class="p-2 box-text-produk">
+                                                <h5 class="card-title mt-2">Dezus Adinda</h5>
+                                                <p class="card-text m-0 opacity-50">Men's Shoes</p>
+                                                <p class="fw-semibold color-teks-produk">IDR 1,030,000</p>
+                                            </div>
+                                        </div>
+                                        <div class="box-produk me-0">
+                                            <img src="asset/image/Puma Softride Sophia Lace Up Sneakers (Big Kid) Casual Shoes Black- Girls- Size 4 D.jpg" class="box-img-produk" alt="...">
+                                            <div class="p-2 box-text-produk">
+                                                <h5 class="card-title mt-2">Dezus Porcupine</h5>
+                                                <p class="card-text m-0 opacity-50">Men's Shoes</p>
+                                                <p class="fw-semibold color-teks-produk">IDR 1,030,000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- kids -->
+                        <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                            aria-labelledby="pills-contact-tab" tabindex="0">
+                            <div class="slidersproduk-container">
+                                <div class="row mx-4 justify-content-center">
+                                    <div class="box-scrols-produk d-flex image-slidersproduk">
+                                        <div class="box-produk ms-0">
+                                            <img src="asset/image/Spring UrbanEvoke Sneakers - Yellow _ EUR 35.jpg" class="box-img-produk" alt="...">
+                                            <div class="p-2 box-text-produk">
+                                                <h5 class="card-title mt-2">Dezus Fashion Kids</h5>
+                                                <p class="card-text m-0 opacity-50">Men's Shoes</p>
+                                                <p class="fw-semibold color-teks-produk">IDR 1,030,000</p>
+                                            </div>
+                                        </div>
+                                        <div class="box-produk">
+                                            <img src="asset/image/Kids Teenagers Boys Hook And Loop Fastener Sneakers, Comfortable Lightweight Non-slip Running Shoes, Spring And Summer.jpg" class="box-img-produk" alt="...">
+                                            <div class="p-2 box-text-produk">
+                                                <h5 class="card-title mt-2">Dezus Fashion Kids</h5>
+                                                <p class="card-text m-0 opacity-50">Men's Shoes</p>
+                                                <p class="fw-semibold color-teks-produk">IDR 1,030,000</p>
+                                            </div>
+                                        </div>
+                                        <div class="box-produk">
+                                            <img src="asset/image/Children Boys And Girls Basketball Shoes, Knit Breathable Shoes Shock Absorption Comfortable Non-slip Running Shoes, Training Athletic Shoes For Spring And Summer.jpg" class="box-img-produk" alt="...">
+                                            <div class="p-2 box-text-produk">
+                                                <h5 class="card-title mt-2">Dezus Fashion Kids</h5>
+                                                <p class="card-text m-0 opacity-50">Men's Shoes</p>
+                                                <p class="fw-semibold color-teks-produk">IDR 1,030,000</p>
+                                            </div>
+                                        </div>
+                                        <div class="box-produk me-0">
+                                            <img src="asset/image/Unisex Kid's Trendy Sports Shoes With Hook And Loop Fastener, Casual Breathable Woven Knit Shock Absorption Comfy Sneakers For Boys And Girls Outdoor Activities.jpg" class="box-img-produk" alt="...">
+                                            <div class="p-2 box-text-produk">
+                                                <h5 class="card-title mt-2">Dezus Fashion Kids</h5>
+                                                <p class="card-text m-0 opacity-50">Men's Shoes</p>
+                                                <p class="fw-semibold color-teks-produk">IDR 1,030,000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- about -->
+        <section>
+            <div data-aos="fade" data-aos-duration="2000" data-aos-easing="ease-out-cubic" class="container my-10 ">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 he-about">
+                        <h1 class="fw-bold fs-custom">ABOUT US</h1>
+                        <p>Selamat datang di Dezuz!</p>
+                        <p>Kami di sini untuk menawarkan lebih dari sekadar sepatu. Kami menawarkan pengalaman, gaya,
+                            dan kenyamanan yang tak tertandingi. Dibangun dengan komitmen yang teguh pada layanan
+                            pelanggan, kami siap membantu Anda menemukan sepatu yang sempurna untuk setiap langkah Anda.
+                            Dengan koleksi sepatu berkualitas tinggi kami, Anda tidak hanya mendapatkan alas kaki yang
+                            dapat diandalkan, tetapi juga perpaduan sempurna antara gaya dan kualitas. Apakah Anda
+                            mencari sepatu untuk aktivitas sehari-hari atau gaya yang sesuai untuk acara khusus, kami
+                            memiliki pilihan yang tepat untuk Anda. Bergabunglah dengan kami saat kami mengajak Anda
+                            untuk menjelajahi dunia sepatu yang tak terbatas, tempat di mana kualitas bertemu gaya</p>
+                        <p>Temukan pasangan sepatu yang tepat di Dezuz!</p>
+                    </div>
+                    <div class="col-lg-4 display-hide" >
+                        <div class="box-img-about">
+                            <img src="asset/image/clothing-elegance-white-fashion-modern-removebg-preview.png" class="img-about" alt="">
+                            <img src="asset/image/clothing-elegance-white-fashion-modern-removebg-preview.png" class="img-about-1" alt="">
+                            <img src="asset/image/clothing-elegance-white-fashion-modern-removebg-preview.png" class="img-about-2" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- riview -->
+
+        <section>
+            <div data-aos="fade" data-aos-duration="2000" data-aos-easing="ease-out-cubic" class="container my-10">
+                <div class="row mt-4 row-responsive-riview">
+                    <div class="col">
+                        <div class="fs-4 d-flex">
+                            <strong class="riview-teks mt-2">REVIEW</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="container-box ">
+                            <div class="box-review">
+                                <img src="asset/image/sepatu2.png" class="ms-4 img-riview-comment" alt="">
+                                <div class="container-text py-3 ">
+                                    <div class="name-text">
+                                        <h3 class="fw-bold">Faisal</h3>
+                                    </div>
+                                    <div class="text-review">
+                                        <p>Dezuz impresses with its diverse selection and attentive 
+                                            service.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-review">
+                                <img src="asset/image/sepatu2.png" class="ms-4 img-riview-comment" alt="">
+                                <div class="container-text py-3 ">
+                                    <div class="name-text">
+                                        <h3 class="fw-bold">Fazri</h3>
+                                    </div>
+                                    <div class="text-review">
+                                        <p>Very nice and Good</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-review">
+                                <img src="asset/image/sepatu2.png" class="ms-4 img-riview-comment" alt="">
+                                <div class="container-text py-3 ">
+                                    <div class="name-text">
+                                        <h3 class="fw-bold">Rayfal</h3>
+                                    </div>
+                                    <div class="text-review">
+                                        <p>Very nice and comfy true to size</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 d-flex justify-content-center">
+                        <div class="img-riview mt-4">
+                            <img src="asset/image/side-view-woman-tying-shoelaces.jpg" class="img-riview" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class=" text-center text-lg-start text-white">
+        <div class="container p-4">
+          <div class="row my-4">
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+    
+              <div class="rounded-circle bg-white shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto" style="width: 150px; height: 150px;">
+                <img src="asset/icons/logo1.png" height="70" alt=""
+                     loading="lazy" />
+              </div>
+    
+              <p class="text-center">DEZUZ SHOES</p>
+    
+              <ul class="list-unstyled d-flex flex-row justify-content-center">
+                <li>
+                  <a class="text-white px-2" href="#!">
+                    <i class="fab fa-facebook-square"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="text-white px-2" href="#!">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="text-white ps-2" href="#!">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </li>
+              </ul>
+    
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase mb-4">Bantuan</h5>
+    
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <a href="#!" class="text-white"><i class="fa-solid fa-angle-right"></i>Hubungi Kami</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#!" class="text-white"><i class="fa-solid fa-angle-right"></i>Pertanyaan Umum</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#!" class="text-white"><i class="fa-solid fa-angle-right"></i>Pengembalian</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#!" class="text-white"><i class="fa-solid fa-angle-right"></i>Temukan Toko</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#!" class="text-white"><i class="fa-solid fa-angle-right"></i>Melacak Pesanan</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase mb-4">Perusahaan</h5>
+    
+              <ul class="list-unstyled">
+                <li class="mb-2">
+                  <a href="#!" class="text-white"><i class="fa-solid fa-angle-right"></i>Kebijakan Privasi</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#!" class="text-white"><i class="fa-solid fa-angle-right"></i>Syarat & Ketentuan</a>
+                </li>
+                <li class="mb-2">
+                  <a href="#!" class="text-white"><i class="fa-solid fa-angle-right"></i>Program</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase mb-4">Contact</h5>
+    
+              <ul class="list-unstyled">
+                <li>
+                  <p><i class="fas fa-map-marker-alt pe-2"></i>Garut, Jawa Barat, Indonesia</p>
+                </li>
+                <li>
+                  <p><i class="fas fa-phone pe-2"></i>081234567</p>
+                </li>
+                <li>
+                  <p><i class="fas fa-envelope pe-2 mb-0"></i>dezus@gmail.com</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+          © 2020 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+      </footer>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<script>AOS.init();</script>
+
